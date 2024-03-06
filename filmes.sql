@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 05/03/2024 às 14:51
+-- Tempo de geração: 06/03/2024 às 14:54
 -- Versão do servidor: 8.0.35-0ubuntu0.22.04.1
 -- Versão do PHP: 8.1.2-1ubuntu2.14
 
@@ -36,6 +36,18 @@ CREATE TABLE `filmes` (
   `nome` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `produtoras`
+--
+
+CREATE TABLE `produtoras` (
+  `id` int NOT NULL,
+  `descrProdutora` varchar(250) NOT NULL,
+  `nome` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 --
 -- Índices para tabelas despejadas
 --
@@ -48,6 +60,12 @@ ALTER TABLE `filmes`
   ADD KEY `fk_produtora` (`id_produtora`);
 
 --
+-- Índices de tabela `produtoras`
+--
+ALTER TABLE `produtoras`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT para tabelas despejadas
 --
 
@@ -55,6 +73,12 @@ ALTER TABLE `filmes`
 -- AUTO_INCREMENT de tabela `filmes`
 --
 ALTER TABLE `filmes`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `produtoras`
+--
+ALTER TABLE `produtoras`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
