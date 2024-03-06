@@ -1,7 +1,7 @@
 <?php
     require_once '../php/init.php';
     $PDO = db_connect();
-    $sql = "SELECT F.nome, F.ano, F.paisOrigem,F.sinopse, P.nome as produtora_nome FROM filmes as F inner join produtoras as P on F.id_produtora = P.id";
+    $sql = "SELECT F.nome,F.id, F.ano, F.paisOrigem,F.sinopse, P.nome as produtora_nome FROM filmes as F inner join produtoras as P on F.id_produtora = P.id";
     $stmt = $PDO->prepare($sql);
     $stmt->execute();
 ?>
@@ -23,15 +23,24 @@
                 <th scope="col">País de Origem</th>
                 <th scope="col">Sinopse</th>
                 <th scope="col">produtora</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
-        <tbody><?php while ($filmes = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+        <tbody>
+            <?php while ($filmes = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+                <tr>
             <th><?php echo $filmes['nome'] ?></th>
             <td><?php echo $filmes['ano'] ?></td>
             <td><?php echo $filmes['paisOrigem'] ?></td>
             <td><?php echo $filmes['sinopse'] ?></td>
             <td><?php echo $filmes['produtora_nome'] ?></td>
-            <!-- como colocar nomeProdutora e ele não crashar com duas chaves de nome ? -->
+            <td> <a class="btn btn-primary" href="formEdit.php?id=<?php echo $filmes['id'] ?>">&#128394 </a></td>
+                    <td>
+            <td>
+                    <a class="btn btn-danger" href="delete.php?id=<?php echo $filmes['id'] ?>" onclick="return confirm('Tem certeza de que deseja remover?');">x</a>
+                    </td>
+            </tr>
             <?php endwhile; ?>
         </tbody>
 
