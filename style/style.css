@@ -1,0 +1,42 @@
+body{
+    background: none;
+    width: calc(100vw - 200px);
+    margin-left: 200px;
+    height: 100vh;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+    outline:0;
+    box-sizing: border-box;
+}
+.blur{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("../images/movie-theater.jpg");   
+    filter: blur(5px);
+    position: fixed;
+    right: 0;
+    top:0;
+    z-index:-1;
+    
+    
+}
+.my-card{
+    z-index: 3;
+    background-color: rgb(207, 207, 207);
+    padding: 2rem;
+    border-radius: 10px;
+    justify-content: space-around;
+    display: flex;
+
+}
+
+.father-card{
+    height: 100vh;
+}
