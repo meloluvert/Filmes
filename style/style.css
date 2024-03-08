@@ -36,7 +36,51 @@ body{
     display: flex;
 
 }
-
+.my-mini-card:hover .remove-btn{
+    opacity: 1;
+}
+.my-mini-card:hover .edit-btn{
+    opacity: 1;
+}
 .father-card{
     height: 100vh;
+}
+.remove-btn{
+    background:none;
+    opacity: 0;
+    text-transform: uppercase;
+    color: gray;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1px 1px 0 0;
+    transition: all ease 0.5s;
+}
+.edit-btn{
+    background:none;
+    text-transform: uppercase;
+    color: gray;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 40px 1px 0 0;
+    opacity: 0;
+
+    transition: all ease 0.5s;
+}
+.img_link{
+
+    height:4rem;
+    width: 4rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 25px 50px 0 0   ;
+    background-color: gray;
+    border-radius: 50%;
+    background-size: cover;
 }

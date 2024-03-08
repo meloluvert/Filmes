@@ -17,7 +17,7 @@ include_once 'const.php';
     <script src="bootstrap/js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="bootstrap/js/jquery.min.js"></script>
-    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo BASE_URL ?>images/icon.png" type="image/x-icon">
     <script type="text/javascript">
         $(document).ready(function () {
             $(function () {
@@ -31,7 +31,7 @@ include_once 'const.php';
     <div id="menu"> </div>
     <div class="row d-flex justify-content-center align-items-center father-card"
         style="width: 100%; padding: 0; margin: 0;">
-        <div class="content col-8 my-card display-7">
+        <div class="content col-8 my-card display-7" style="display:block;">
             <p>Este é um projeto web baseado nas funcionalidades e design da Netflix. Ele foi desenvolvido utilizando tecnologias como PHP, HTML, CSS e MySQL. O objetivo principal do projeto é disponibilizar entretenimento de forma universal, reunindo filmes e séries em uma única plataforma.Aqui você pode:</p>
 
                 <ul>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 06/03/2024 às 17:53
+-- Tempo de geração: 08/03/2024 às 16:19
 -- Versão do servidor: 8.0.35-0ubuntu0.22.04.1
 -- Versão do PHP: 8.1.2-1ubuntu2.14
 
@@ -33,7 +33,8 @@ CREATE TABLE `filmes` (
   `paisOrigem` varchar(20) NOT NULL,
   `sinopse` varchar(255) NOT NULL,
   `id_produtora` int NOT NULL,
-  `nome` varchar(40) NOT NULL
+  `nome` varchar(40) NOT NULL,
+  `img_link` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -45,7 +46,8 @@ CREATE TABLE `filmes` (
 CREATE TABLE `produtoras` (
   `id` int NOT NULL,
   `descrProdutora` varchar(250) NOT NULL,
-  `nome` varchar(20) NOT NULL
+  `nome` varchar(20) NOT NULL,
+  `img_link` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -73,13 +75,13 @@ ALTER TABLE `produtoras`
 -- AUTO_INCREMENT de tabela `filmes`
 --
 ALTER TABLE `filmes`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de tabela `produtoras`
 --
 ALTER TABLE `produtoras`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Restrições para tabelas despejadas
