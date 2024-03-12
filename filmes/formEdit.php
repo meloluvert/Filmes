@@ -56,6 +56,7 @@
 
 
             <form class="form-inline col-10 my-lg-0" action="edit.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $id ?>">
                 <div class="form-group">
                     <div class="form-floating">
                         <input type="text" name="nome" id="floatingInput" value="<?php echo $filmes['nome'] ?>" class="form-control" placeholder="Fox">
@@ -63,7 +64,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Editar</button>
                 </div>
             </form>
         </div>
